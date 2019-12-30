@@ -1,4 +1,4 @@
-# dlxpy
+# DLXPy - Dancing Links in Python (with Sudoku Solver and Combinatorial Design Generator)
 
 **Status:** Complete, verson 1.0.4.
 
