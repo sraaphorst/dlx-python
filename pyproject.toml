@@ -1,5 +1,50 @@
 [build-system]
-requires = ["setuptools>=42", "setuptools_scm[toml]>=3.4"]
+requires = ["setuptools>=61.2", "setuptools_scm[toml]>=3.4"]
 build-backend = "setuptools.build_meta"
+
+[project]
+name = "dlx"
+authors = [{name = "Sebastian Raaphorst", email = "srcoding@gmail.com"}]
+license = {text = "Apache-2.0"}
+description = "Implementation of Donald Knuth's Dancing Links algorithm."
+keywords = [
+    "exact",
+    "cover",
+    "algorithm",
+    "dlx",
+    "dancing",
+    "links",
+]
+classifiers = [
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python",
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Topic :: Scientific/Engineering :: Mathematics",
+]
+dynamic = ["version"]
+
+[project.urls]
+Homepage = "http://www.site.uottawa.ca/~mraap046"
+"Source Code" = "https://github.com/sraaphorst/dlx-python"
+"Bug Tracker" = "https://github.com/sraaphorst/dlx-python/issues"
+
+[project.readme]
+text = """
+This package provides an implementation of Donald Knuth's Dancing
+Links algorithm for solving exact set cover problems.
+1.0.4: Minor Python 3 bugfix.
+1.0.3: Attempt to make code compatible with Python 3.
+1.0.2: Removed extraneous code (had switched from callbacks for solutions to
+making solve a generator to yield, but had forgotten to remove the
+solution callback function parameter from the solve method).
+1.0.1: Critical bugfix (N array was one short: did not account for header).
+1.0.0: Initial release."""
+content-type = "text/plain"
+
+[tool.setuptools]
+packages = ["dlx"]
+license-files = ["LICENSE"]
+include-package-data = false
 
 [tool.setuptools_scm]
